@@ -1,0 +1,25 @@
+Script to make input audio sound like its buffering due to bad internet connection.
+
+Recquirements - 
+-An audio system running on Pulseaudio (Any linux distro)
+-sox (sudo apt install sox)
+
+How to use - 
+1. Load nullsink module with - 
+	pactl load-module module-null-sink
+
+2. Make buffer.sh executable
+
+3. Run ./buffer.sh
+
+Optional - Use the command - `pavucontrol` to route audio manually.
+
+In the recording tab, sox should be taking input from the intended input device.
+If all the previous steps have been completed.
+
+4. ./buffer.sh will run the script for 20 minutes approx and you can increase the time by passing a number like
+	./buffer.sh n
+	
+	n refers to n*250 seconds of time the program will run. Therefore by default 
+	./buffer.sh 	and
+	./buffer.sh 5   are the same
