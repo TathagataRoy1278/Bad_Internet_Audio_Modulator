@@ -23,3 +23,5 @@ If all the previous steps have been completed.
 	n refers to n*250 seconds of time the program will run. Therefore by default 
 	./buffer.sh 	and
 	./buffer.sh 5   are the same
+
+5. Then in the application where you want to modulate your voice, change the voice input to "Monitor of Null Output", which should be visible now.
