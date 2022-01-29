@@ -1,3 +1,8 @@
+./is_loaded.sh module-null-sink
+if [ $? == 1 ]; then
+    echo Loading Module
+    pactl load-module module-null-sink
+fi
 comm="sox -t pulseaudio default -t pulseaudio null contrast 50 dither echo 0.8 0.5 60 0.5 trim "
 N=5
 if [ $# -ge 1 ]; then
